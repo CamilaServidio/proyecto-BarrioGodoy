@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gimnasios - Barrio Godoy</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <!-- Barra horizontal -->
+    <header class="topbar">
+        <img src="../img/logo.png" alt="Logo Barrio Godoy" class="logo-img" />
+        <button id="btnToggleSidebar" title="Abrir menú lateral">☰</button>
+        <nav class="topnav">
+            <a href="../index.html#inicio">Inicio</a>
+            <a href="../index.html#historia">Historia</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+        <button id="btnToggleTheme" title="Cambiar modo claro/oscuro">🌙</button>
+    </header>
+
+    <!-- Barra lateral -->
+    <aside id="sidebar" class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="gimnasios.html">🏋️ Gimnasios</a>
+            <a href="negocios.html">🏪 Negocios</a>
+            <a href="club.html">🤝 Club</a>
+            <a href="torneos.html">🏆 Torneos de BG</a>
+            <a href="actividades.html">🎉 Actividades del barrio</a>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main id="mainContent" class="main-content">
+        <section id="gimnasios" class="seccion">
+            <h2>🏋️ Gimnasios en Barrio Godoy</h2>
+            <p>Estos son algunos de los gimnasios que podés encontrar en nuestro barrio:</p>
+
+            <div class="gimnasios-grid">
+                <article class="gimnasio-card">
+                    <img src="../img/gym1.jpg" alt="WOD GYM" class="gym-img">
+                    <h3>WOD ADDICTION GYM</h3>
+                    <p><strong>Dirección:</strong> Av.Las Palmeras 250</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes de 7:00 a 22:00</p>
+                      <p><strong>Sábados:</strong> 9:00 a 14:00</p>
+                </article>
+                <article class="gimnasio-card">
+                    <img src="../img/gym2.jpg" alt="CROSS GYM" class="gym-img">
+                    <h3>CROSS GYM</h3>
+                    <p><strong>Dirección:</strong> Av.Rivarola 7042</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes de 8:00 a 21:00</p>
+                      <p><strong>Sábados:</strong> 10:00 a 12:00 y de 17:00 a 19:00 </p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
