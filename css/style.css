@@ -7,20 +7,20 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff; /* blanco */
-    color: #0d0d0d; /* negro oscuro */
+    background-color: #ffffff;
+    color: #0d0d0d;
     min-height: 100vh;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Barra horizontal arriba */
+/* Barra superior */
 .topbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #004aad; /* azul fuerte */
+    background-color: #004aad;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -28,15 +28,16 @@ body {
     gap: 1rem;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    .logo-img {
+}
+
+.logo-img {
     height: 40px;
     width: auto;
 }
 
-}
-
-/* Botón menú lateral */
-#btnToggleSidebar {
+/* Botones barra superior */
+#btnToggleSidebar,
+#btnToggleTheme {
     font-size: 1.6rem;
     background: transparent;
     border: none;
@@ -44,7 +45,8 @@ body {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-#btnToggleSidebar:hover {
+#btnToggleSidebar:hover,
+#btnToggleTheme:hover {
     color: #a3c1f7;
 }
 
@@ -54,15 +56,11 @@ body {
     gap: 1.8rem;
     flex: 1;
 }
-
 .topnav a {
     color: #e6e6e6;
     font-weight: 600;
     text-decoration: none;
-    padding: 0.3rem 0;
-    border-bottom: 3px solid transparent;
     position: relative;
-    transition: color 0.3s ease;
 }
 .topnav a::after {
     content: "";
@@ -74,52 +72,88 @@ body {
     background-color: #a3c1f7;
     transition: width 0.3s ease;
 }
-.topnav a:hover {
-    color: #a3c1f7;
-}
 .topnav a:hover::after {
     width: 100%;
 }
 
-/* Botón modo oscuro */
-#btnToggleTheme {
-    font-size: 1.6rem;
-    background: transparent;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-#btnToggleTheme:hover {
-    color: #a3c1f7;
-}
-
-/* Barra lateral vertical */
+/* Barra lateral */
 .sidebar {
     position: fixed;
-    top: 50px; /* altura barra horizontal */
+    top: 50px;
     left: 0;
     width: 220px;
     height: calc(100vh - 50px);
-    background-color: #001f4d; /* azul muy oscuro */
+    background-color: #001f4d;
     color: #ffffff;
     padding: 1.2rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
-    z-index: 999;
-    /* Animación de entrada */
     transform: translateX(-100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+    transition: transform 0.35s ease;
 }
-
-/* Mostrar sidebar */
 .sidebar.active {
     transform: translateX(0);
 }
 
+.sidebar-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 0;
+    display: block;
+}
+.sidebar-nav a:hover {
+    color: #a3c1f7;
+}
+
+/* --- Submenú Categorías --- */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.submenu-toggle:hover {
+    color: #a3c1f7;
+}
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+}
+.submenu.open {
+    max-height: 300px; /* Ajusta según contenido */
+}
+
+.submenu li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+.submenu li a:hover {
+    background-color: #003080;
+    border-radius: 4px;
+    color: #a3c1f7;
+}
 /* Links barra lateral */
 .sidebar-nav a {
     color: #b3c7ff;
@@ -138,15 +172,7 @@ body {
     color: #ffffff;
 }
 
-/* iconos barra lateral */
-.sidebar-nav a::before {
-    content: "•"; /* punto como icono simple */
-    color: #7a94ff;
-    font-size: 1.2rem;
-    position: relative;
-    left: -4px;
-    transition: color 0.25s ease;
-}
+
 .sidebar-nav a:hover::before {
     color: #c4d1ff;
 }
@@ -242,7 +268,7 @@ header {
 }
 
 .logo-img {
-  height: 60px;
+  height: 40px;
 }
 
 nav a {
@@ -329,6 +355,84 @@ body.dark .negocio-card {
 body.dark .negocio-card h3 {
     color: #6a8dff;
 }
+.categorias-bar {
+    position: sticky;
+    top: 50px;
+    background-color: #004aad;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 10px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.categorias-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.categorias-bar a:hover {
+    color: #a3c1f7;
+}
+/* --- Negocios --- */
+.negocios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.negocio-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.negocio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.negocio-card h3 {
+    margin: 0.8rem 0;
+    color: #004aad;
+}
+
+.negocio-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.negocio-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0.8rem;
+}
+
+/* --- Modo oscuro --- */
+body.dark .negocio-card {
+    background-color: #1a1a2e;
+    color: #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+body.dark .negocio-card h3 {
+    color: #6a8dff;
+}
+
+body.dark .negocio-card p {
+    color: #bbb;
+}
+
 
 
 

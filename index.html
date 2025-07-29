@@ -5,60 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Barrio Godoy</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script defer src="js/main.js"></script>
 </head>
 <body>
-    <!-- Barra horizontal -->
+    <!-- Barra superior -->
     <header class="topbar">
-    <img src="img/logo.png" alt="Logo Barrio Godoy" class="logo-img" />
-    <button id="btnToggleSidebar" title="Abrir menú lateral">☰</button>
-    <nav class="topnav">
-        <a href="#inicio">Inicio</a>
-        <a href="#historia">Historia</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    <button id="btnToggleTheme" title="Cambiar modo claro/oscuro">🌙</button>
-</header>
+        <img src="img/logo.png" alt="Logo Barrio Godoy" class="logo-img" />
+        <button id="btnToggleSidebar" title="Abrir menú lateral"><i class="fa-solid fa-bars"></i></button>
+        <nav class="topnav">
+            <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="#historia"><i class="fa-solid fa-book-open"></i> Historia</a>
+        </nav>
+        <button id="btnToggleTheme" title="Cambiar modo claro/oscuro"><i class="fa-solid fa-moon"></i></button>
+    </header>
 
-
-    <!-- Barra lateral  -->
+    <!-- Barra lateral -->
     <aside id="sidebar" class="sidebar">
-  <nav class="sidebar-nav">
-   <a href="secciones/gimnasios.html">🏋️ Gimnasios</a>
-   <a href="negocios.html">🏪 Negocios</a>
-    <a href="#">🤝 Club</a>
-    <a href="#">🏆 Torneos de BG</a>
-    <a href="#">🎉 Actividades del barrio</a>
-  </nav>
-</aside>
+        <nav class="sidebar-nav">
+            <a href="secciones/negocios.html"><i class="fa-solid fa-store"></i> Negocios</a>
+            <a href="secciones/club.html"><i class="fa-solid fa-people-group"></i> Club</a>
+            <a href="secciones/torneos.html"><i class="fa-solid fa-trophy"></i> Torneos de BG</a>
+            <a href="secciones/actividades.html"><i class="fa-solid fa-calendar-days"></i> Actividades del barrio</a>
+        </nav>
+    </aside>
 
- 
+    <!-- Contenido principal -->
+    <main id="mainContent" class="main-content">
+        <!-- Inicio -->
+        <section id="inicio" class="seccion">
+            <h1> Bienvenidos a Barrio Godoy</h1>
+            <p>Este sitio es el punto de encuentro de nuestra comunidad. Encontrá toda la información actualizada sobre el barrio, eventos, servicios y actividades.</p>
+        </section>
 
-<!---inicio-->
-   <main id="mainContent" class="main-content">
-
-    <section id="inicio" class="seccion">
-        <h1>🏘️ Bienvenidos a Barrio Godoy</h1>
-        <p>Este sitio es el punto de encuentro de nuestra comunidad. Encontrá toda la información actualizada sobre el barrio, eventos, servicios y actividades.</p>
-    </section>
-
-    <section id="historia" class="seccion">
-        <h2>📜 Nuestra Historia</h2>
-        <p>Barrio Godoy tiene una rica historia de desarrollo social, cultura y vecindad. Desde sus inicios, ha sido símbolo de unidad y crecimiento colectivo.</p>
-        <p>Hoy seguimos escribiendo nuevas páginas junto a cada familia, club, comercio y espacio del barrio.</p>
-    </section>
-
-    <section id="contacto" class="seccion">
-        <h2>📬 Contacto</h2>
-        <p>¿Querés participar, sugerir algo o comunicarte con nosotros? Estas son nuestras vías de contacto:</p>
-        <ul>
-            <li>📧 Email: <a href="mail:info@barriogodoy.com">info@barriogodoy.com</a></li>
-            <li>📞 Teléfono: (0341) 123-4567</li>
-            <li>📍 Dirección: Rivarola 7500, Rosario, Santa Fe</li>
-        </ul>
-    </section>
-
-</main>
-
+        <!-- Historia -->
+        <section id="historia" class="seccion">
+            <h2> Nuestra Historia</h2>
+            <p>Barrio Godoy tiene una rica historia de desarrollo social, cultura y vecindad. Desde sus inicios, ha sido símbolo de unidad y crecimiento colectivo.</p>
+            <p>Hoy seguimos escribiendo nuevas páginas junto a cada familia, club, comercio y espacio del barrio.</p>
+        </section>
+    </main>
 </body>
 </html>

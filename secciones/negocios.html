@@ -5,65 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Negocios - Barrio Godoy</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script defer src="../js/main.js"></script>
 </head>
 <body>
     <!-- Barra superior -->
     <header class="topbar">
         <img src="../img/logo.png" alt="Logo Barrio Godoy" class="logo-img" />
-        <button id="btnToggleSidebar" title="Abrir menú lateral">☰</button>
+        <button id="btnToggleSidebar" title="Abrir menú lateral"><i class="fa-solid fa-bars"></i></button>
         <nav class="topnav">
-            <a href="../index.html#inicio">Inicio</a>
-            <a href="../index.html#historia">Historia</a>
-            <a href="../index.html#contacto">Contacto</a>
+            <a href="../index.html#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="../index.html#historia"><i class="fa-solid fa-book-open"></i> Historia</a>
         </nav>
-        <button id="btnToggleTheme" title="Cambiar modo claro/oscuro">🌙</button>
+        <button id="btnToggleTheme" title="Cambiar modo claro/oscuro"><i class="fa-solid fa-moon"></i></button>
     </header>
 
     <!-- Barra lateral -->
     <aside id="sidebar" class="sidebar">
         <nav class="sidebar-nav">
-            <a href="gimnasios.html">🏋️ Gimnasios</a>
-            <a href="negocios.html">🏪 Negocios</a>
-            <a href="club.html">🤝 Club</a>
-            <a href="torneos.html">🏆 Torneos de BG</a>
-            <a href="actividades.html">🎉 Actividades del barrio</a>
+            <a href="negocios.html"><i class="fa-solid fa-store"></i> Negocios</a>
+            <a href="club.html"><i class="fa-solid fa-people-group"></i> Club</a>
+            <a href="torneos.html"><i class="fa-solid fa-trophy"></i> Torneos de BG</a>
+            <a href="actividades.html"><i class="fa-solid fa-calendar-days"></i> Actividades del barrio</a>
         </nav>
     </aside>
 
+    <!-- Barra secundaria -->
+    <nav class="categorias-bar">
+        <a href="#supermercados"><i class="fa-solid fa-cart-shopping"></i> Supermercados</a>
+        <a href="#talleres"><i class="fa-solid fa-screwdriver-wrench"></i> Talleres mecánicos</a>
+        <a href="#tiendas"><i class="fa-solid fa-shirt"></i> Tiendas de ropa</a>
+        <a href="#estaciones"><i class="fa-solid fa-gas-pump"></i> Estaciones</a>
+        <a href="#farmacias"><i class="fa-solid fa-prescription-bottle-medical"></i> Farmacias</a>
+        <a href="#heladerias"><i class="fa-solid fa-ice-cream"></i> Heladerías</a>
+        <a href="#mayoristas"><i class="fa-solid fa-boxes-stacked"></i> Mayoristas</a>
+    </nav>
+
     <!-- Contenido principal -->
     <main id="mainContent" class="main-content">
-        <section id="negocios" class="seccion">
-            <h2>🏪 Negocios en Barrio Godoy</h2>
-            <p>Conocé los comercios de nuestro barrio:</p>
 
+        <!-- Supermercados -->
+        <section id="supermercados" class="seccion">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Supermercados</h2>
             <div class="negocios-grid">
+                <!-- Negocio -->
                 <article class="negocio-card">
-                    <img src="../img/almacen.jpg" alt="Almacén El Barrio" class="negocio-img">
-                    <h3>SUPER ACUARELAS</h3>
-                    <p><strong>Dirección:</strong> Irurtia 8231 </p>
-                    <p><strong>Horario:</strong> Lunes a Sábados - 8:00 a 12:00 - 17:00 a 21:00</p>
-                    <p><strong>Domingos:</strong> Cerrado</p>
+                    <img src="../img/supermercadochino.jpg" alt="Supermercado Los Chinos" class="negocio-img">
+                    <h3>SUPERMERCADO LOS CHINOS</h3>
+                    <p><strong>Dirección:</strong> Av. Rivarola 7598</p>
+                    <p><strong>Horario:</strong> Lunes a Sábados 9:00 - 13:30 / 17:00 - 21:30</p>
                 </article>
 
                 <article class="negocio-card">
-                    <img src="../img/panaderia.jpg" alt="Panadería La Delicia" class="negocio-img">
-                    <h3>PANADERÍA LA FAMILIA DE KIKO</h3>
-                    <p><strong>Dirección:</strong> Av.Rivarola 7861</p>
-                    <p><strong>Horario:</strong> Lunes a Viernes: 7:30 a 12:30 - 17:00 a 20:00 </p>
-                     <p><strong>Sábados:</strong> 7:00 - 13:00 - 16:30 a 20:30</p>
-                    <p><strong>Domingos:</strong> 7:00 - 13:00</p>
-                </article>
-
-                <article class="negocio-card">
-                    <img src="../img/farmacia.jpg" alt="Farmacia Godoy" class="negocio-img">
-                    <h3>FARMACIA RIVAROLA</h3>
-                    <p><strong>Dirección:</strong> Av.Rivarola 7969</p>
-                     <p><strong>Horario:</strong> Lunes a Sábados - 8:00 a 21:30</p>
-                     <p><strong>Domingos:</strong> 8:30 - 13:30</p>
+                    <img src="../img/almacen.jpg" alt="Super Acuarela" class="negocio-img">
+                    <h3>SUPER ACUARELA</h3>
+                    <p><strong>Dirección:</strong> Irurtia 8231</p>
+                    <p><strong>Horario:</strong> Lunes a Sábados 8:00 - 12:00 / 17:00 - 21:00</p>
                 </article>
             </div>
         </section>
+
+        <!-- Talleres -->
+        <section id="talleres" class="seccion">
+            <h2><i class="fa-solid fa-screwdriver-wrench"></i> Talleres Mecánicos</h2>
+            <div class="negocios-grid">
+                <!-- Agregá negocios aquí -->
+            </div>
+        </section>
+
+        <!-- Tiendas -->
+        <section id="tiendas" class="seccion">
+            <h2><i class="fa-solid fa-shirt"></i> Tiendas de Ropa</h2>
+            <div class="negocios-grid">
+                <!-- Agregá negocios aquí -->
+            </div>
+        </section>
+
+        <!-- Estaciones -->
+        <section id="estaciones" class="seccion">
+            <h2><i class="fa-solid fa-gas-pump"></i> Estaciones de Servicio</h2>
+            <div class="negocios-grid">
+               <article class="negocio-card">
+             <img src="../img/puma.jpg" alt="Puma Energy" class="negocio-img">
+             <h3>PUMA ENERGY</h3>
+             <p><strong>Dirección:</strong> Av.Presidente Peron 2010</p>
+             <p><strong>Horario:</strong> Abierto las 24 horas</p>
+             </article>
+<article class="negocio-card">
+    <img src="../img/shell.jpg" alt="shell estacion" class="negocio-img">
+    <h3>SHELL</h3>
+    <p><strong>Dirección:</strong> Provincias Unidas 2000</p>
+    <p><strong>Horario:</strong> Abierto las 24 horas</p>
+</article>
+
+            </div>
+        </section>
+
+        <!-- Farmacias -->
+        <section id="farmacias" class="seccion">
+            <h2><i class="fa-solid fa-prescription-bottle-medical"></i> Farmacias</h2>
+            <div class="negocios-grid">
+                
+            </div>
+        </section>
+
+        <!-- Heladerías -->
+        <section id="heladerias" class="seccion">
+            <h2><i class="fa-solid fa-ice-cream"></i> Heladerías</h2>
+            <div class="negocios-grid">
+                
+            </div>
+        </section>
+
+        <!-- Mayoristas -->
+        <section id="mayoristas" class="seccion">
+            <h2><i class="fa-solid fa-boxes-stacked"></i> Mayoristas</h2>
+            <div class="negocios-grid">
+                
+            </div>
+        </section>
+
     </main>
 </body>
 </html>
